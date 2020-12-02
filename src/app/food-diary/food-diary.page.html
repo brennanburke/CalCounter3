@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot = "start"></ion-menu-button>
+    <ion-buttons slot = "end" (click)="newEntry()">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-buttons>
+    <ion-title>Food Diary</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of diaryService.diaryEntries" (click)="onSelect(item)">
+    <ng-container *ngIf="item.user == this.cUser">
+    <ion-card-header>
+      <ion-icon slot="start"></ion-icon>
+      {{ item.date }}
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ item.food }}</p>
+      <p>{{ item.calories }} Calories</p>
+      <p> {{item.user}}</p>
+    </ion-card-content>
+    </ng-container>
+  </ion-card>
+</ion-content>

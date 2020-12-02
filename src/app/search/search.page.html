@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot = "start"></ion-menu-button>
+    <ion-title>Food Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-card>
+      <ion-input placeholder="Enter Food Name Here" [(ngModel)]="foodsearchService.searchTerm" name="searchTerm"></ion-input>
+    </ion-card>
+    <ion-grid>
+
+        <ion-button type = "submit" (click)="gotoResult()">
+        Search
+        </ion-button>
+      
+    </ion-grid>
+  </form>
+</ion-content>

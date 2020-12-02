@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot = "start"></ion-menu-button>
+    <ion-title>Result</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="food card" *ngFor="let item of foodsearchService.foodData">
+    <ion-card-header>
+      <img src= "{{item.food.image}}" alt="pic of food"/>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title> {{ item.food.label }} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p> calories per serving: {{ item.food.nutrients.ENERC_KCAL }}</p>
+      <p> protein: {{ item.food.nutrients.PROCNT }} grams</p>
+      <p> carbs: {{ item.food.nutrients.CHOCDF }} grams</p>
+      
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

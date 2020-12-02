@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Diary Entry Details</ion-title>
+    <ion-buttons >
+      <ion-button routerLink="/" routerDirection="back">
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+  <h4>{{ entry.date }}</h4>
+  <div>{{ entry.food }}</div>
+  <div>{{ entry.calories }} Calories</div>
+  </ion-card>
+</ion-content>

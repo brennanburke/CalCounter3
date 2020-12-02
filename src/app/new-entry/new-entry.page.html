@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    
+      <ion-button slot= "end" routerLink="/food-diary">
+        Cancel
+      </ion-button>
+    
+    <ion-title>New Diary Entry</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="addDiary()">  
+    <ion-card> {{ entry.user }}</ion-card>
+    <ion-card>
+      <ion-textarea placeholder="mm/dd/yy" maxlength=8 [(ngModel)] ="entry.date" name ="date">Date:</ion-textarea>
+    </ion-card>  
+    <ion-card>
+      <ion-textarea rows=10 [(ngModel)] ="entry.food" name= "food">Food Consumed:</ion-textarea>
+    </ion-card>
+    <ion-card>
+      <ion-textarea inputmode= "numeric" [(ngModel)] ="entry.calories" name="calories">Total Calories:</ion-textarea>
+    </ion-card>
+    <ion-button shape="round" type="submit">Enter</ion-button>
+  </form>
+</ion-content>
